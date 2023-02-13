@@ -1,0 +1,3 @@
+[submodule "deps/kana"]
+	path = deps/kana
+	url = https://git.sr.ht/~gbrlsnchs/kana

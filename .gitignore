@@ -1,0 +1,5 @@
+.kak*
+dist/
+node_modules/
+www/
+zig*

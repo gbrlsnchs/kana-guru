@@ -1,0 +1,13 @@
+{
+	"fmt": {
+		"options": {
+			"useTabs": true,
+			"lineWidth": 100
+		}
+	},
+	"tasks": {
+		"build": "deno run --allow-read --allow-write --allow-run ./scripts/build.ts",
+		"serve": "deno run --allow-read --allow-net=:8000 src/server.ts",
+		"prepare": "deno task build && mkdir -p dist && cp -r www src/server.ts dist/"
+	}
+}

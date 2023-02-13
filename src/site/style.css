@@ -1,0 +1,129 @@
+:root {
+	--bg-color: #1d1f21;
+	--fg-color: #c5c8c6;
+	--gray: #373b41;
+	--copy: #8c9440;
+	--link: #5f819d;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #c5c8c6;
+		--fg-color: #1d1f21;
+		--copy: #de935f;
+		--link: #a54242;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background-color: var(--bg-color);
+	color: var(--fg-color);
+	overflow: auto;
+	font-family: monospace;
+}
+
+body > div {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 640px;
+	padding: 16px;
+}
+
+@media (max-width: 640px) {
+	body > div {
+		width: 100vw;
+	}
+}
+
+h2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+	h2 {
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
+h2,
+h3 {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 0;
+}
+
+p {
+	margin: 0;
+}
+
+h3:first-of-type:after,
+h3:last-of-type:after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background: var(--gray);
+	position: absolute;
+	top: 50%;
+	margin-left: 1rem;
+}
+
+a {
+	color: var(--gray);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--link);
+}
+
+input[type="checkbox"] {
+	margin-right: 8px;
+}
+
+label:hover,
+input[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+textarea {
+	height: 8rem;
+	resize: none;
+	overflow-y: scroll;
+	font-size: inherit;
+	border: 1px solid var(--gray);
+	padding: 8px;
+}
+
+textarea,
+input[type="checkbox"] {
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+#copyright {
+	color: var(--gray);
+	font-size: 0.8rem;
+}
+
+#result {
+	white-space: pre-line;
+	overflow-wrap: break-word;
+}
+
+#copy {
+	font-size: 0.8rem;
+}
+
+#copy:hover {
+	cursor: pointer;
+	color: var(--copy);
+}
