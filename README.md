@@ -6,6 +6,9 @@ other project, [kana](https://git.sr.ht/~gbrlsnchs/kana).
 
 Note that kana.guru doesn't send the input to any servers, as it runs locally in the browser.
 
+A mirror is located at [GitHub](https://github.com/gbrlsnchs/kana-guru). Feel free to give it
+a star if you feel like it. :-)
+
 ### Building
 
 _TODO_
