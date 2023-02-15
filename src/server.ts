@@ -43,7 +43,8 @@ function handler(req: Request) {
 		});
 	}
 
-	return Response.redirect("/");
+	const url = new URL(req.url);
+	return Response.redirect(url.origin);
 }
 
 serve(handler, {
