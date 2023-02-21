@@ -1,5 +1,6 @@
 .kak*
 dist/
 node_modules/
-www/
+server/assets/*
+!server/assets/favicon.svg
 zig*
