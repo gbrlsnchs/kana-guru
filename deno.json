@@ -7,7 +7,9 @@
 	},
 	"tasks": {
 		"build": "deno run --allow-read --allow-write --allow-run ./scripts/build.ts",
-		"serve": "deno run --allow-read --allow-net=:8000 src/server.ts",
-		"prepare": "deno task build && mkdir -p dist && cp -r www src/server.ts dist/"
+		"build-watch": "deno run --allow-read --allow-write --allow-run --watch=./site ./scripts/build.ts",
+		"serve": "deno run --allow-read --allow-net=:8000 main.ts",
+		"serve-watch": "deno run --allow-read --allow-net=:8000 --watch=/tmp/kana-guru-sync main.ts",
+		"watch": "deno task build-watch & deno task --cwd server serve-watch"
 	}
 }

@@ -4,6 +4,7 @@
 		<title>kana.guru - Convert romaji to hiragana/katakana</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="favicon.svg" />
 		<link rel="stylesheet" href="style.css" />
 		<script type="module" src="kana.js"></script>
 	</head>
@@ -66,7 +67,10 @@
 			<h3>Input</h3>
 			<textarea id="romaji" autocomplete="off" spellcheck="false"></textarea>
 
-			<h3>Output <span id="copy" tabindex="0">(copy)</span></h3>
+			<div id="output">
+				<h3>Output</h3>
+				<button id="copy">(copy)</button>
+			</div>
 			<p id="result"></p>
 		</div>
 	</body>

@@ -10,7 +10,8 @@
 	:root {
 		--bg-color: #c5c8c6;
 		--fg-color: #1d1f21;
-		--copy: #de935f;
+		--gray: #707880;
+		--copy: #5e8d87;
 		--link: #a54242;
 	}
 }
@@ -65,15 +66,14 @@ p {
 	margin: 0;
 }
 
-h3:first-of-type:after,
-h3:last-of-type:after {
+h3:first-of-type:after {
 	content: "";
 	width: 100%;
 	height: 1px;
 	background: var(--gray);
 	position: absolute;
 	top: 50%;
-	margin-left: 1rem;
+	margin-left: 16px;
 }
 
 a {
@@ -83,6 +83,7 @@ a {
 
 a:hover {
 	color: var(--link);
+	text-decoration: underline;
 }
 
 input[type="checkbox"] {
@@ -95,7 +96,7 @@ input[type="checkbox"]:hover {
 }
 
 textarea {
-	height: 8rem;
+	height: 128px;
 	resize: none;
 	overflow-y: scroll;
 	font-size: inherit;
@@ -116,14 +117,32 @@ input[type="checkbox"] {
 
 #result {
 	white-space: pre-line;
-	overflow-wrap: break-word;
+	overflow-wrap: anywhere;
 }
 
 #copy {
+	font-family: monospace;
 	font-size: 0.8rem;
+	font-weight: bold;
+	color: var(--fg-color);
+	border: 0;
+	background-color: var(--bg-color);
+	padding: 0;
 }
 
 #copy:hover {
 	cursor: pointer;
 	color: var(--copy);
+}
+
+#output {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: end;
+	gap: 16px;
+}
+
+#output > h3 {
+	flex: 1;
 }
